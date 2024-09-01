@@ -13,6 +13,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.penguinplay.minecraftevolution.block.ModBlocks;
 import net.penguinplay.minecraftevolution.items.ModItems;
 import org.slf4j.Logger;
 //very important comment
@@ -35,7 +36,10 @@ public class MinecraftEvolution
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -55,6 +59,11 @@ public class MinecraftEvolution
             event.accept(ModItems.DARKITE);
             event.accept(ModItems.RAW_LUMENITE);
             event.accept(ModItems.RAW_DARKITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept((ModBlocks.LUMENITE_BLOCK));
+            event.accept((ModBlocks.DARKITE_BLOCK));
         }
     }
 
