@@ -1,9 +1,21 @@
 {
+
   "item.minecraftevolution.lumenite": "Lumenite",
   "item.minecraftevolution.darkite": "Darkite",
   "item.minecraftevolution.raw_lumenite": "Raw Lumenite",
   "item.minecraftevolution.raw_darkite": "Raw Darkite",
 
+  "item.minecraftevolution.chisel": "Chisel",
+
   "block.minecraftevolution.lumenite_block": "Lumenite Block",
-  "block.minecraftevolution.darkite_block": "Darkite Block"
+  "block.minecraftevolution.darkite_block": "Darkite Block",
+  "block.minecraftevolution.lumenite_ore": "Lumenite Ore",
+  "block.minecraftevolution.darkite_ore": "Darkite Ore",
+
+  "item.minecraftevolution.light_berry": "Light Berry",
+  "item.minecraftevolution.dark_berry": "Dark Berry",
+
+  "creativetab.minecraftevolution.minecraft_evolution_items": "Minecraft Evolution Items",
+  "creativetab.minecraftevolution.minecraft_evolution_blocks": "Minecraft Evolution Blocks",
+  "creativetab.minecraftevolution.minecraft_evolution_tools_and_utility": "Minecraft Evolution Tools & Utility"
 }

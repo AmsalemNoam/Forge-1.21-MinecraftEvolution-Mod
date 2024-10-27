@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.penguinplay.minecraftevolution.block.ModBlocks;
+import net.penguinplay.minecraftevolution.items.ModCreativeTabs;
 import net.penguinplay.minecraftevolution.items.ModItems;
 import org.slf4j.Logger;
 //very important comment
@@ -36,6 +37,7 @@ public class MinecraftEvolution
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -54,17 +56,27 @@ public class MinecraftEvolution
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+
+        if(event.getTabKey() == ModCreativeTabs.MINECRAFT_EVOLUTION_ITEMS_TAB.getKey()){
             event.accept(ModItems.LUMENITE);
             event.accept(ModItems.DARKITE);
             event.accept(ModItems.RAW_LUMENITE);
             event.accept(ModItems.RAW_DARKITE);
         }
 
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+        if(event.getTabKey() == ModCreativeTabs.MINECRAFT_EVOLUTION_BLOCKS_TAB.getKey()){
             event.accept((ModBlocks.LUMENITE_BLOCK));
             event.accept((ModBlocks.DARKITE_BLOCK));
+            event.accept((ModBlocks.LUMENITE_ORE));
+            event.accept((ModBlocks.DARKITE_ORE));
         }
+
+        if(event.getTabKey() == ModCreativeTabs.MINECRAFT_EVOLUTION_TOOLS_AND_UTILITY_TAB.getKey()){
+            event.accept((ModItems.CHISEL));
+            event.accept(ModItems.LIGHT_BERRY);
+            event.accept(ModItems.DARK_BERRY);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

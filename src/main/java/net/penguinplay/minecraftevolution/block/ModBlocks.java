@@ -1,9 +1,11 @@
 package net.penguinplay.minecraftevolution.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,15 +36,29 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LUMENITE_BLOCK =
             registerBlock("lumenite_block", () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f)
+                    .strength(8f)
                     .requiresCorrectToolForDrops()
-                    .lightLevel(state -> 7)));
+                    .lightLevel(state -> 10)));
 
 
     public static final RegistryObject<Block> DARKITE_BLOCK =
             registerBlock("darkite_block", () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f)
+                    .strength(8f)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LUMENITE_ORE =
+            registerBlock("lumenite_ore",
+                    () -> new DropExperienceBlock(UniformInt.of(4, 8), BlockBehaviour.Properties.of()
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 3)));
+
+
+    public static final RegistryObject<Block> DARKITE_ORE =
+            registerBlock("darkite_ore",
+                    () -> new DropExperienceBlock(UniformInt.of(4, 8), BlockBehaviour.Properties.of()
+                            .strength(6f)
+                            .requiresCorrectToolForDrops()));
 
 
 

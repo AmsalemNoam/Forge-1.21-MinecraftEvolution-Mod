@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 2,
+  "group": "lumenite",
+  "ingredient": {
+    "item": "minecraftevolution:raw_lumenite"
+  },
+  "result": {
+    "id": "minecraftevolution:lumenite"
+  }
+}

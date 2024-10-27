@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.penguinplay.minecraftevolution.MinecraftEvolution;
+import net.penguinplay.minecraftevolution.items.custom.ChiseItem;
 
 public class ModItems {
     //List of the Items under our MOD_ID
@@ -17,6 +18,29 @@ public class ModItems {
     public static final RegistryObject<Item> DARKITE = ITEMS.register("darkite", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_LUMENITE = ITEMS.register("raw_lumenite", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_DARKITE = ITEMS.register("raw_darkite", () -> new Item(new Item.Properties()));
+
+
+
+    //--------------------------------------=FOODS!=---------------------------------------
+    public static final RegistryObject<Item> LIGHT_BERRY = ITEMS.register("light_berry",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LIGHT_BERRY)));
+
+    public static final RegistryObject<Item> DARK_BERRY = ITEMS.register("dark_berry",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.DARK_BERRY)));
+
+
+
+
+
+
+// --------------------------------------=TOOLS!=---------------------------------------
+    public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel", () -> new ChiseItem(new Item.Properties().durability(128)));
+
+
+
+
+
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

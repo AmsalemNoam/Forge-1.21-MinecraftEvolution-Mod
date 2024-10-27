@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 2,
+  "group": "lumenite",
+  "ingredient": {
+    "item": "minecraftevolution:raw_lumenite"
+  },
+  "result": {
+    "id": "minecraftevolution:lumenite"
+  }
+}

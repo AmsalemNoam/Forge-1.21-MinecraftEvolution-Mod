@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraftevolution:lumenite_block",
+    "minecraftevolution:darkite_block",
+    "minecraftevolution:lumenite_ore",
+    "minecraftevolution:darkite_ore"
+  ]
+}
