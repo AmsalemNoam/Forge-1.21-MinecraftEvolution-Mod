@@ -9,8 +9,8 @@ public class ModFoodProperties {
     public static final FoodProperties  LIGHT_BERRY = new FoodProperties.Builder()
             .nutrition(6)
             .saturationModifier(0.8F)
-            .effect(new MobEffectInstance(MobEffects.CONFUSION, 200),0.05F)
-            .effect(new MobEffectInstance(MobEffects.GLOWING, 500, 0),0.5F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 150),0.05F)
+            .effect(new MobEffectInstance(MobEffects.GLOWING, 250, 0),0.5F)
             .effect(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0),1)
             .alwaysEdible()
             .build();
